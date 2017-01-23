@@ -136,7 +136,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
 
   # Execute the actual build
   mvn $MAVEN_ARGS
-  MAVEN_ARGS2=${-DskipTests -s configuration/cicd-settings.xml deploy}
+  MAVEN_ARGS2="-DskipTests -s configuration/cicd-settings.xml deploy"
 
   mvn $MAVEN_ARGS2
 
